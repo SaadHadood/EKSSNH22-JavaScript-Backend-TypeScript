@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ExternalLinkIcon = ({link, icon}) => {
+
+function ExternalLinkIcon ({link, icon}: { link: string; icon: string }) {
   return (
     <a href={link} target="_blank">
         <i className={icon}></i>
