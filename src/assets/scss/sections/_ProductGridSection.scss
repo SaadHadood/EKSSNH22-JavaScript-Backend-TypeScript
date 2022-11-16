@@ -1,0 +1,184 @@
+.product-grid {
+    margin-bottom: 60px;
+    .container {
+        max-width: 1110px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .col {
+        height: 13rem;
+        width: 15rem;
+        margin-bottom: 8rem;
+    }
+
+    .section-title h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5.5rem 0 1rem 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: $linear-gradient-light;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 0;
+    }
+
+    .card-body p {
+        font-weight: 500;
+        color: $color-darkgray;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    .card-body h1 {
+        color: #23262A;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        margin-top: -0.4rem;
+    }
+
+    .text-theme {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #FF7373;
+        padding-top: 0.3rem;
+
+        & i {
+            margin: 0 0.2rem; 
+        }
+    }
+
+    .card-body .card-old-price {
+        text-decoration: line-through;
+        margin: 0;
+    }
+
+    .card-body .card-discount-price {
+        color:#23262A;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .card .quick-button button {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: #FF7373;
+        color: white;
+        font-size: 14px;
+        font-family: Poppins;
+        font-weight: 400;
+        height: 50px;
+        opacity: 0.9;
+        border: none;
+        z-index: 1;
+        top: 180%;
+        transition: top 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #ff5d5d;
+                color: black;
+            } 
+    }
+
+    .card:hover .quick-button button {
+        top: 76%;
+    }
+    
+    .card .quick-button button::before,
+    .card .quick-button button::after{
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 20px;
+    }
+
+    .card .quick-button button::before {
+        left: 8px;
+        top: 9px;
+        border-left: 3px solid white;
+        border-top: 3px solid white;
+        opacity: 0.8;
+    }
+    .card .quick-button button::after {
+        right: 8px;
+        bottom: 9px;
+        border-right:3px solid white;
+        border-bottom:3px solid white;
+        opacity: 0.8;
+    }
+
+    .card-menu i {
+        color: $color-dark;
+        font-weight: medium;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 0px solid #fff;
+        box-shadow: 0 0 0 1px white;
+
+       &:hover {
+        color: #FE7878;
+       } 
+    }
+
+    .card-menu button {
+        background: none;
+        border: none;
+        padding: 0;
+        outline: none;
+    }
+
+    .card-menu .fa-heart {
+        background-color: black;
+        border: 0px solid black;
+        box-shadow: 0 0 0 1px black;
+        color: white;
+    }
+
+    .card .card-menu {
+        position: absolute;
+        z-index: 1;
+        top: 121%;
+        right: 0rem;
+        list-style: none;
+        padding: 0.8rem 0.5rem 0 0;
+        font-size: 1.25rem;
+        transition: top 0.3s ease-in-out;
+    }
+
+    .card:hover .card-menu {
+        top: -5%;
+    }
+
+    .card .card-menu li {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        font-size: 1.0em;
+    }
+
+    .card .card-background {
+        position: absolute;
+        bottom: 0;
+        height: 15%;
+        width: 100%;
+        opacity: 0.90;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .card:hover .card-background {
+        background-color: #CDCED0;
+        height: 100%;
+    }
+}

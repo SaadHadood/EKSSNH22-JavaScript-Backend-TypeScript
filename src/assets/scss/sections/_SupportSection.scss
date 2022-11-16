@@ -1,0 +1,45 @@
+.support {
+
+    .container {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: 954px;
+        border-top: 1px solid #D3D3D4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dot {
+        border-radius: 50%;
+        border: 20px solid #fff;
+        box-shadow: 0 0 7px 0 #dee0e1;
+        filter: drop-shadow(0 15px 5px #f4f8fa);
+
+            &:hover {
+                border-radius: 50%;
+                border: 20px solid #EFEFEF;
+            }
+    }
+
+
+    .icons-support {
+        margin-top: 4rem;
+        padding: 1rem;
+
+        h1 {
+            margin-top: 2rem;
+            font-family: Poppins;
+            font-weight: bold;
+            font-size: 20px;
+            color: #222529;
+        }
+
+        p {
+            font-family: Poppins;
+            color: #616365;
+            font-size: 14px;
+        }
+    }
+}
