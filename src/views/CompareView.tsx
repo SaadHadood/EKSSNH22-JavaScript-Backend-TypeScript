@@ -2,8 +2,10 @@ import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
-const WishListView = () => {
-  window.top.document.title = 'WishList | Fixxo.'
+let window: any;
+
+const CompareView = () => {
+  window.top.document.title = 'Compare | Fixxo.'
 
   return (
     <>
@@ -13,4 +15,4 @@ const WishListView = () => {
   )
 }
 
-export default WishListView
+export default CompareView

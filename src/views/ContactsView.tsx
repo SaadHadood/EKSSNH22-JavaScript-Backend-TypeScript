@@ -5,6 +5,8 @@ import BreadcrumbsSection from '../sections/BreadcrumbSection'
 import MapSection from '../sections/MapSection'
 import ContactFormSection from '../sections/ContactFormSection'
 
+let window: any;
+
 const ContactsView = () => {
   window.top.document.title = 'Contacts | Fixxo.'
 

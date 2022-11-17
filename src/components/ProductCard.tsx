@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCart } from '../contexts/ShoppingCartContext'
 
-const ProductCard = ({product}) => {
+function ProductCard ({product}: { product: React.FC | any }) {
     const { incrementQuantity } = useShoppingCart()
 
 

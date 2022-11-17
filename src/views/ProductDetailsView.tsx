@@ -5,6 +5,10 @@ import MainMenuSection from '../sections/MainMenuSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import ProductDetailsSection from '../sections/ProductDetailsSection'
 
+
+let window: any;
+
+
 const ProductDetailsView = () => {
   window.top.document.title = 'ProductDetails | Fixxo.'
 

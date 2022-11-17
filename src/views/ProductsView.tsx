@@ -3,6 +3,7 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import PageProductSection from '../sections/PageProductSection'
 
+let window: any;
 
 const ProductsView = () => {
   window.top.document.title = 'Products | Fixxo.'

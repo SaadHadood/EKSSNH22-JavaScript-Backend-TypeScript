@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
-const Discount = ({tittle, products}) => {
+function Discount ({tittle, products}: {tittle: string; products: {} | any } ) {
 
   return (
 
@@ -17,7 +17,7 @@ const Discount = ({tittle, products}) => {
 
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 {
-                  products.map(product => <ProductCard key={product.id} product={product} />)
+                  products.map((product: { id: React.Key | null | undefined; }) => <ProductCard key={product.id} product={product} />)
                 }
             </div> 
 

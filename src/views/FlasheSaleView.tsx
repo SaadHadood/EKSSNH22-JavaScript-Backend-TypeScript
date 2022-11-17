@@ -2,8 +2,10 @@ import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
-const CompareView = () => {
-  window.top.document.title = 'Compare | Fixxo.'
+let window: any;
+
+const FlasheSaleView = () => {
+  window.top.document.title = 'FlasheSale | Fixxo.'
 
   return (
     <>
@@ -13,4 +15,4 @@ const CompareView = () => {
   )
 }
 
-export default CompareView
+export default FlasheSaleView

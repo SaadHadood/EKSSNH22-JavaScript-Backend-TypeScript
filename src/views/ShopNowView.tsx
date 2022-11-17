@@ -2,8 +2,10 @@ import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
-const FlasheSaleView = () => {
-  window.top.document.title = 'FlasheSale | Fixxo.'
+let window: any;
+
+const ShopNowView = () => {
+  window.top.document.title = 'ShopNow | Fixxo.'
 
   return (
     <>
@@ -13,4 +15,4 @@ const FlasheSaleView = () => {
   )
 }
 
-export default FlasheSaleView
+export default ShopNowView

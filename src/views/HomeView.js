@@ -9,6 +9,8 @@ import SecondDiscount from '../sections/SecondDiscount'
 import SupportSection from '../sections/SupportSection'
 import { ProductContext } from '../contexts/contexts'
 
+
+
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
 

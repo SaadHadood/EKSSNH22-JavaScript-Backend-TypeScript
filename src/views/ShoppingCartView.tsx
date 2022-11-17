@@ -2,8 +2,11 @@ import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
-const ShopNowView = () => {
-  window.top.document.title = 'ShopNow | Fixxo.'
+let window: any;
+
+
+const ShoppingCartView = () => {
+  window.top.document.title = 'ShoppingCart | Fixxo.'
 
   return (
     <>
@@ -13,4 +16,4 @@ const ShopNowView = () => {
   )
 }
 
-export default ShopNowView
+export default ShoppingCartView

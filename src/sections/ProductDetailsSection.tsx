@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductDetailsSection = ({product}) => {
+function ProductDetailsSection ({product}: { product: React.FC | any }) {
     return (
 
       <section className="details">

@@ -24,7 +24,7 @@ const MainMenuSection = () => {
         <div className="menu-icons">
             <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
             <MenuIcon hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare fa-flip-horizontal" />
-            <MenuIcon hideOnMobile={true} quantity="3" link="/wishlist" icon="fa-regular fa-heart" />
+            <MenuIcon hideOnMobile={true} quantity={3} link="/wishlist" icon="fa-regular fa-heart" />
 
 
             <button className="menu-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" >

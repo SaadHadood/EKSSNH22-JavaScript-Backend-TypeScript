@@ -9,18 +9,11 @@ import WishListView from './views/WishListView';
 import CompareView from './views/CompareView';
 import SearchView from './views/SearchView';
 import ProductsView from './views/ProductsView';
-import PageProductSection from './sections/PageProductSection';
 import ProductDetailsView from './views/ProductDetailsView';
 import CategoriesView from './views/CategoriesView';
 import ShopNowView from './views/ShopNowView';
 import FlasheSaleView from './views/FlasheSaleView'
-import FooterSection from './sections/FooterSection';
 import MainMenuSection from './sections/MainMenuSection';
-import ShowCase from './sections/ShowCase';
-import TopPicks from './sections/TopPicks';
-import Discount from './sections/Discount';
-import SecondDiscount from './sections/SecondDiscount';
-import SupportSection from './sections/SupportSection';
 import { ProductContext } from './contexts/contexts';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 
