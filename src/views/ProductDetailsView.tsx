@@ -4,13 +4,11 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import ProductDetailsSection from '../sections/ProductDetailsSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 
-let window: any;
-
-
-const ProductDetailsView = () => {
-  window.top.document.title = 'ProductDetails | Fixxo.'
+const ProductDetailsView: React.FC = () => {
+  TabTitle ('ProductDetails | Fixxo.');
 
   const {id} = useParams()
   const [product, setProduct] = useState({})

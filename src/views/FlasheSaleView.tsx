@@ -1,11 +1,11 @@
 import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
-let window: any;
 
-const FlasheSaleView = () => {
-  window.top.document.title = 'FlasheSale | Fixxo.'
+const FlasheSaleView: React.FC = () => {
+  TabTitle ('FlasheSale | Fixxo.');
 
   return (
     <>

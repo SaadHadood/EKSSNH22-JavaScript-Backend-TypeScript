@@ -2,11 +2,11 @@ import React, { useContext, useState } from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import PageProductSection from '../sections/PageProductSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
-let window: any;
 
-const ProductsView = () => {
-  window.top.document.title = 'Products | Fixxo.'
+const ProductsView: React.FC = () => {
+  TabTitle ('Products | Fixxo.');
 
   const [pageProducts, setPageProducts] = useState ([
     {id: 1, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/4946413/pexels-photo-4946413.jpeg?auto=compress&cs=tinysrgb&w=1600" },

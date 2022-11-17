@@ -8,11 +8,12 @@ import Discount from '../sections/Discount'
 import SecondDiscount from '../sections/SecondDiscount'
 import SupportSection from '../sections/SupportSection'
 import { ProductContext } from '../contexts/contexts'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 
 
-const HomeView = () => {
-  window.top.document.title = 'Fixxo.'
+const HomeView: React.FC = () => {
+  TabTitle('Fixxo.')
 
   const [featuredProducts, setFeaturedProducts] = useState ([
     {id: 1, name: "Modern Black Blouse", category: "Fashion", price: "35.00", rating: 5, img: "https://images.pexels.com/photos/4946413/pexels-photo-4946413.jpeg?auto=compress&cs=tinysrgb&w=1600" },

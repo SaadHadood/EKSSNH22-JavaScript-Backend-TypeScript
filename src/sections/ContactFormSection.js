@@ -3,7 +3,7 @@ import { submitData, validate } from '../assets/scripts/submit_and_validation'
 
 const ContactFormSection = () => {
   let currentPage = "Contact Us"
-  window.top.document.title = `${currentPage} || Fixxo`
+  window.top.document.title = `${currentPage} | Fixxo`
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')

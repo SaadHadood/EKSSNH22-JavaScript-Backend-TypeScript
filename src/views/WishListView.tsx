@@ -1,11 +1,11 @@
 import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
-let window: any;
 
-const WishListView = () => {
-  window.top.document.title = 'WishList | Fixxo.'
+const WishListView: React.FC = () => {
+  TabTitle ('WishList | Fixxo.');
 
   return (
     <>

@@ -1,11 +1,11 @@
 import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
-let window: any;
 
-const NotFoundView = () => {
-  window.top.document.title = 'NotFound | Fixxo.'
+const NotFoundView: React.FC = () => {
+  TabTitle ('NotFound | Fixxo.');
 
   return (
     <>

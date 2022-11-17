@@ -1,12 +1,13 @@
 import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import { TabTitle } from '../utilities/GeneralFunctions';
 
 let window: any;
 
 
-const ShoppingCartView = () => {
-  window.top.document.title = 'ShoppingCart | Fixxo.'
+const ShoppingCartView: React.FC = () => {
+  TabTitle ('ShoppingCart | Fixxo.');
 
   return (
     <>

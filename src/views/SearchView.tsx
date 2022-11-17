@@ -1,11 +1,11 @@
 import React from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import { TabTitle } from '../utilities/GeneralFunctions';
 
-let window: any;
 
-const SearchView = () => {
-  window.top.document.title = 'Search | Fixxo.'
+const SearchView: React.FC = () => {
+  TabTitle ('Search | Fixxo.');
 
   return (
     <>

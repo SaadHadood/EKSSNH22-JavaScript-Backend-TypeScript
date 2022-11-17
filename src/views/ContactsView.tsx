@@ -4,11 +4,11 @@ import MainMenuSection from '../sections/MainMenuSection'
 import BreadcrumbsSection from '../sections/BreadcrumbSection'
 import MapSection from '../sections/MapSection'
 import ContactFormSection from '../sections/ContactFormSection'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
-let window: any;
 
-const ContactsView = () => {
-  window.top.document.title = 'Contacts | Fixxo.'
+const ContactsView: React.FC = () => {
+  TabTitle ('Contacts | Fixxo.');
 
   return (
     <>
