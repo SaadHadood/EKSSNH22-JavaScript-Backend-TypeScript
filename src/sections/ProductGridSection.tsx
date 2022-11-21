@@ -1,7 +1,14 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
+import { item } from '../models/item'
 
-function ProductGridSection ({tittle, items}: {tittle: string; items: [] }) {
+
+interface Props {
+  tittle: string
+  items: []
+}
+
+const ProductGridSection: React.FC<Props> = ({tittle, items = []}) => {
   return (
     <section className="product-grid">
         <div className="container">
@@ -10,7 +17,7 @@ function ProductGridSection ({tittle, items}: {tittle: string; items: [] }) {
             </div>
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 {
-                  items.map( (product: { articleNumber: React.Key | null | undefined; }) => <ProductCard key={product.articleNumber} product={product} />)
+                  items.map( (product: item) => <ProductCard key={product.articleNumber} product={product} />)
                 }
             </div>    
         </div>

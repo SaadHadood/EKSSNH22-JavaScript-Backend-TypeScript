@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
+import { item } from '../models/item';
 
 
 function PageProductSection ({tittle, products}: { tittle: string; products: any }) {
@@ -11,7 +12,7 @@ function PageProductSection ({tittle, products}: { tittle: string; products: any
               </div>
               <div className="row row-cols-1 row-cols-md-4 g-4">
                   {
-                    products.map((product: { id: React.Key | null | undefined; }) => <ProductCard key={product.id} product={product} />)
+                    products.map((product: item) => <ProductCard key={product.id} product={product} />)
                   }
               </div>    
           </div>

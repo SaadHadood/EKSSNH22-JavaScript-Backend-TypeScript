@@ -1,8 +1,15 @@
 import React from 'react'
 import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { item } from '../models/item'
 import { currencyFormatter } from '../utilities/currencyFormatter'
 
-const ShoppingCartItem = ({product}) => {
+
+interface Props {
+    product: item 
+}
+
+
+const ShoppingCartItem: React.FC<Props> = ({product}) => {
     const { incrementQuantity, decrementQuantity, removeItem } = useShoppingCart()
 
 
