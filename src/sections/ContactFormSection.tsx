@@ -9,11 +9,11 @@ const ContactFormSection = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [comments, setComments] = useState('')
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState<any>('');
   const [submitted, setSubmitted] = useState(false)
   const [failedSubmit, setFailedSubmit] = useState(false)
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: any; type?: string; }) => {
     const {id, value} = e.target
     switch(id) {
       case 'name':
@@ -30,7 +30,7 @@ const ContactFormSection = () => {
     setErrors({...errors, [id]: validate(e)})
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFailedSubmit(false)
     setSubmitted(false)
