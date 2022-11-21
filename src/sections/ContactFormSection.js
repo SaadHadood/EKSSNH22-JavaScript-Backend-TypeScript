@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { submitData, validate } from '../assets/scripts/submit_and_validation'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 const ContactFormSection = () => {
-  let currentPage = "Contact Us"
-  window.top.document.title = `${currentPage} | Fixxo`
+  
+  TabTitle('Contact US | Fixxo.');
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
