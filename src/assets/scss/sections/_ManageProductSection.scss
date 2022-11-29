@@ -1,0 +1,33 @@
+.manage {
+  margin-top: 9rem;
+  margin-bottom: 15.4rem;
+
+    .btn-group {
+      display: block;
+  }
+
+  .btn-group button {
+    margin-bottom: 1rem;
+    background-color: #b9b9b9;
+    border: 1px solid #dcdcdc; 
+    color: white;
+    padding: 50px 24px;
+    cursor: pointer; 
+    width: 100%; 
+    text-decoration: none;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+  }
+
+
+  .btn-group button:not(:last-child) {
+    border-bottom: none;
+  }
+  
+
+  .btn-group button:hover {
+    background-color: rgb(159, 157, 157);
+    color: black;
+  }
+
+}

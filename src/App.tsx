@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react'
 import './style.min.css';
 import { BrowserRouter, Routes, Route  } from 'react-router-dom'
 import ContactsView from './views/ContactsView';
+import CreateProductView from './views/CreateProductView';
+import UpdateFormView from './views/UpdateProductView';
+import ManageProductView from './views/ManageProductView';
 import HomeView from './views/HomeView';
 import NotFoundView from './views/NotFoundView';
 import ShoppingCartView from './views/ShoppingCartView';
@@ -48,6 +51,9 @@ const App: React.FC = () => {
         <Route path="/shoppingcart" element={<ShoppingCartView />} />
         <Route path="/shopnow" element={<ShopNowView />} />
         <Route path="/flashesale" element={<FlasheSaleView />} />
+        <Route path="/manageproduct" element={<ManageProductView />} />
+        <Route path="/createproduct" element={<CreateProductView />} />
+        <Route path="/updateproduct" element={<UpdateFormView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
