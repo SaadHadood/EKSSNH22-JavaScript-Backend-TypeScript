@@ -1,9 +1,24 @@
 import React, { useEffect } from 'react'
 import {IUserContext, UserContext} from '../contexts/UserContext'
+import { useParams } from 'react-router-dom'
+
 
 const UpdateForm = () => {
+const [category, setCategory] = React.useState();
+const params = useParams();
   
-  const { user, setUser, get, update  } = React.useContext(UserContext) as IUserContext
+const { user, setUser, get, update  } = React.useContext(UserContext) as IUserContext
+
+useEffect(()=> {
+  getProductDetails();
+},[])
+
+const getProductDetails = async ()=>{
+  let result = await fetch(`http://localhost:5000/api/users/${params.id}`);
+  result = await result.json()
+  console.warn(result)
+  /* setCategory(result.category); */
+}
 
 
 

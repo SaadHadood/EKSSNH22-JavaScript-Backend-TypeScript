@@ -53,7 +53,7 @@ const App: React.FC = () => {
         <Route path="/flashesale" element={<FlasheSaleView />} />
         <Route path="/manageproduct" element={<ManageProductView />} />
         <Route path="/createproduct" element={<CreateProductView />} />
-        <Route path="/updateproduct" element={<UpdateFormView />} />
+        <Route path="/updateproduct/:id" element={<UpdateFormView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
