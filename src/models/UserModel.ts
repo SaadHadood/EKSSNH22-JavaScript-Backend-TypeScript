@@ -1,10 +1,11 @@
 export interface Product {
     id: number
     category: string
-    title: string
-    image: string
+
+    imageName: string
     description: string
     price: number
+    name: string
 }
 
 export interface ProductRequest {

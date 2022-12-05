@@ -20,7 +20,7 @@ export const useUserContext = () => { return useContext(UserContext)}
 
 const UserProvider = ({children} : UserProviderProps) => {
     const baseUrl = 'http://localhost:5000/api/users'
-    const user_default: Product = { id: 0, category: '', title: '', description: '', image: '', price: 0 }
+    const user_default: Product = { id: 0, category: '', name: '', description: '', imageName: '', price: 0 }
     const userRequest_default: ProductRequest = { category: '', title: '', description: '', image: '', price: 0 }
 
     const [user, setUser] = useState<Product>(user_default)

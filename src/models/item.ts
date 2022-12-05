@@ -8,6 +8,6 @@ export interface item {
     img: string
     category: string
     imageName: string
-    id: string
+    id: string | number
     tittle: string
 }

@@ -25,9 +25,7 @@ controller.route('/')
     users.push(user)
     httpResponse.status(201).json(user)
 })
-.get((httpRequest, httpResponse) => {
-    httpResponse.status(200).json(users)
-})
+
 
 
 // http://localhost:5000/api/users/1
@@ -63,6 +61,47 @@ controller.route("/:id")
     }
         else
             httpResponse.status(404).json()
+})
+
+
+
+
+
+controller.param("id", (reg, res, next, id) => {
+    reg.user = users.find(x => x.id == id)
+    next()
+})
+
+controller.param("tag", (req, res, next, tag) => {
+    req.users = users.filter(x => x.tag == tag)
+    next()
+})
+
+controller.route('/details/:articleNumber').get((reg, res) => {
+    if(reg.user != undefined)
+        res.status(200).json(reg.user)
+    else
+        res.status(404).json()
+})
+
+controller.route('/:tag').get((req, res) => {
+    if(req.users != undefined)
+        res.status(200).json(req.users)
+    else
+        res.status(404).json()
+})
+
+controller.route('/:tag/:take').get((req, res) => {
+    let list = []
+
+    for (let i =0; i < Number(req.params.take); i++)
+        list.push(req.users[i])
+    
+    res.status(200).json(list)
+})
+
+controller.route('/').get((req, res) => {
+    res.status(200).json(users)
 })
 
 module.exports = controller

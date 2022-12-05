@@ -27,7 +27,7 @@ const App: React.FC = () => {
   
     useEffect(() => {
       const fetchFeaturedProducts = async () => {
-        let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+        let result = await fetch('http://localhost:5000/api/users/featured/8')
         setProducts({...products, featuredProducts: await result.json()})
       }
       fetchFeaturedProducts()
@@ -54,6 +54,7 @@ const App: React.FC = () => {
         <Route path="/manageproduct" element={<ManageProductView />} />
         <Route path="/createproduct" element={<CreateProductView />} />
         <Route path="/updateproduct/:id" element={<UpdateFormView />} />
+        <Route path="/updateproduct" element={<UpdateFormView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
