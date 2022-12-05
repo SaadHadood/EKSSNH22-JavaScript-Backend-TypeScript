@@ -11,7 +11,7 @@ export interface IUserContext {
     create: (e: React.FormEvent) => void
     get: (id: number) => void
     getAll: () => void
-    update: (e: React.FormEvent) => void
+    update: any
     remove: (id: number) => void
 }
 
@@ -54,10 +54,10 @@ const getAll = async () => {
         setUsers(await result.json())
 }
 
-const update = async (e: React.FormEvent) => {
+const update = async (id:number, e: React.FormEvent) => {
     e.preventDefault()
 
-    const result = await fetch(`${baseUrl}/${user.id}`, {
+    const result = await fetch(`${baseUrl}/${id}`, {
         method: 'put',
         headers: {
             'Content-Type': 'application/json'

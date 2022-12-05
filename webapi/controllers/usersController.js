@@ -36,6 +36,7 @@ controller.route("/:id")
         else
             httpResponse.status(404).json()
 })
+
 .put((httpRequest, httpResponse) => {
     if (httpRequest.user != undefined ) {
         users.forEach(user => {
