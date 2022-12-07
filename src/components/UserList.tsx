@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import {IUserContext, UserContext} from '../contexts/UserContext'
+import {ProductContextType, ProductContext} from '../contexts/ProductContext'
 import { Product } from '../models/UserModel'
 
 const UserList = () => {
-    const { users, getAll, remove } = React.useContext(UserContext) as IUserContext
+    const { users, getAllCreatProduct, remove } = React.useContext(ProductContext) as ProductContextType
 
 
     useEffect(() => {
-        getAll()
+      getAllCreatProduct()
         
-    }, [getAll])
+    }, [getAllCreatProduct])
 
 
   return (

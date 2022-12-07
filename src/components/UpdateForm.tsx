@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {IUserContext, UserContext} from '../contexts/UserContext'
+import {ProductContextType, ProductContext} from '../contexts/ProductContext'
 import { useParams } from 'react-router-dom'
 
 
@@ -7,7 +7,7 @@ const UpdateForm = () => {
 const [title, setTitle] = React.useState('');
 const params = useParams();
   
-const { user, setUser, get, update } = React.useContext(UserContext) as IUserContext
+const { user, setUser, get, update } = React.useContext(ProductContext) as ProductContextType
 
 useEffect(()=> {
   getProductDetails();

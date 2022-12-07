@@ -19,6 +19,7 @@ import FlasheSaleView from './views/FlasheSaleView'
 import MainMenuSection from './sections/MainMenuSection';
 import { ProductContext } from './contexts/contexts';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
+import ProductProvider from './contexts/ProductContext';
 
 const App: React.FC = () => {
   const [products, setProducts] = useState({
@@ -38,7 +39,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ShoppingCartProvider>
-      <ProductContext.Provider value={products}>
+      <ProductProvider>
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/categories" element={<CategoriesView />} />
@@ -58,7 +59,7 @@ const App: React.FC = () => {
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
-      </ProductContext.Provider>
+      </ProductProvider>
       </ShoppingCartProvider>
     </BrowserRouter>
   );

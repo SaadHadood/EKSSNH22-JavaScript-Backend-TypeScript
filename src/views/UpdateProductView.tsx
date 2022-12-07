@@ -3,7 +3,7 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import { TabTitle } from '../utilities/GeneralFunctions'
 import UserList from '../components/UserList';
-import UserProvider from '../contexts/UserContext';
+import UserProvider from '../contexts/ProductContext';
 import UpdateForm from '../components/UpdateForm';
 import BreadcrumbsSection from '../sections/BreadcrumbSection';
 

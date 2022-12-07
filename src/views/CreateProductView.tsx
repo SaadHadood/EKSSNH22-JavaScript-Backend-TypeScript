@@ -4,7 +4,7 @@ import MainMenuSection from '../sections/MainMenuSection'
 import { TabTitle } from '../utilities/GeneralFunctions'
 import CreateForm from '../components/CreateForm';
 import UserList from '../components/UserList';
-import UserProvider from '../contexts/UserContext';
+import UserProvider from '../contexts/ProductContext';
 import BreadcrumbsSection from '../sections/BreadcrumbSection';
 
 

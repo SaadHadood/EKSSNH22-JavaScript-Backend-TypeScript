@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
-import ProductGridSection from '../sections/ProductGridSection'
 import ProductDetailsSection from '../sections/ProductDetailsSection'
 import { TabTitle } from '../utilities/GeneralFunctions'
+import { ProductContextType, useProductContext } from '../contexts/ProductContext'
+import BreadcrumbsSection from '../sections/BreadcrumbSection'
 
 
 const ProductDetailsView: React.FC = () => {
   TabTitle ('ProductDetails | Fixxo.');
 
-  const {id} = useParams()
-  const [product, setProduct] = useState({})
+  const {id} = useParams<string>()
+  const productContext = useProductContext() as ProductContextType
 
   useEffect(() => {
-    const fetchData = async () => {
-        const result = await fetch(`https://win22-webapi.azurewebsites.net/api/products/${id}`)
-        setProduct(await result.json())
-    }
-    fetchData()
+    productContext.get(id)
 }, [])
 
 
@@ -26,7 +23,8 @@ const ProductDetailsView: React.FC = () => {
   return (
     <>
         <MainMenuSection />
-        <ProductDetailsSection product={product} />
+        <BreadcrumbsSection currentPage={productContext.product.name} />
+        <ProductDetailsSection product={productContext.product} />
         <FooterSection />
     </>
   )

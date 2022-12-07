@@ -1,8 +1,8 @@
 import React from 'react'
-import {IUserContext, UserContext} from '../contexts/UserContext'
+import {ProductContextType, ProductContext} from '../contexts/ProductContext'
 
 const CreateForm = () => {
-  const { userRequest, setUserRequest, create  } = React.useContext(UserContext) as IUserContext
+  const { userRequest, setUserRequest, create  } = React.useContext(ProductContext) as ProductContextType
 
 
   return (

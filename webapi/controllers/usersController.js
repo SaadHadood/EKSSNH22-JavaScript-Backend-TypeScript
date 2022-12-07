@@ -78,7 +78,7 @@ controller.param("tag", (req, res, next, tag) => {
     next()
 })
 
-controller.route('/details/:articleNumber').get((reg, res) => {
+controller.route('/details/:id').get((reg, res) => {
     if(reg.user != undefined)
         res.status(200).json(reg.user)
     else

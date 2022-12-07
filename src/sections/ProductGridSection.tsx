@@ -5,7 +5,7 @@ import { item } from '../models/item'
 
 interface Props {
   tittle: string
-  items: []
+  items: any
 }
 
 const ProductGridSection: React.FC<Props> = ({tittle, items = []}) => {

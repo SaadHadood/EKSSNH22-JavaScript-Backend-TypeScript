@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const ShowCase = () => {
+const ShowCase: React.FC = () => {
   return (
   <section className="showcase">
       <div className="container">
