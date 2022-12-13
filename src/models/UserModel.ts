@@ -11,7 +11,7 @@ export interface Product {
 export interface ProductRequest {
     category: string
     image: string
-    title: string
+    name: string
     description: string
     price: number
 }

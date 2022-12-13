@@ -16,7 +16,7 @@ controller.route('/')
     let user = {
         id: (users [users.length -1])?.id > 0 ? (users [users.length -1])?.id + 1 : 1,
         category: httpRequest.body.category,
-        title: httpRequest.body.title,
+        name: httpRequest.body.name,
         image: httpRequest.body.image,
         description: httpRequest.body.description,
         price: httpRequest.body.price,
@@ -42,7 +42,7 @@ controller.route("/:id")
         users.forEach(user => {
             if (user.id == httpRequest.user.id) {
             user.category = httpRequest.body.category ? httpRequest.body.category : user.category
-            user.title = httpRequest.body.title ? httpRequest.body.title : user.title
+            user.name = httpRequest.body.name ? httpRequest.body.name : user.name
             user.image = httpRequest.body.image ? httpRequest.body.image : user.image
             user.description = httpRequest.body.description ? httpRequest.body.description : user.description
             user.price = httpRequest.body.price ? httpRequest.body.price : user.price

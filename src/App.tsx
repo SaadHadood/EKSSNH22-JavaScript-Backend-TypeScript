@@ -22,19 +22,6 @@ import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 import ProductProvider from './contexts/ProductContext';
 
 const App: React.FC = () => {
-  const [products, setProducts] = useState({
-    featuredProducts: []
-  })
-  
-    useEffect(() => {
-      const fetchFeaturedProducts = async () => {
-        let result = await fetch('http://localhost:5000/api/users/featured/8')
-        setProducts({...products, featuredProducts: await result.json()})
-      }
-      fetchFeaturedProducts()
-
-  }, [setProducts])
-
 
   return (
     <BrowserRouter>

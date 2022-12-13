@@ -15,7 +15,7 @@ export interface item {
 
 export interface ProductItem {
     tag: string
-    articleNumber: string
+    id: number
     description: string
     name: string
     category: string

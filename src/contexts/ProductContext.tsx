@@ -15,13 +15,14 @@ export interface ProductContextType {
     featured: ProductItem[]
     discount: ProductItem[]
     discount2: ProductItem[]
-    get: (articleNumber?: string) => void
+    get: (articleNumber?: any) => void
     getAll: () => void
     getFeatured: (take?: number) => void
     getDiscount: (take?: number) => void
     getDiscount2: (take?: number) => void
     user: Product
     setUser: React.Dispatch<React.SetStateAction<Product>>
+    setProduct: React.Dispatch<React.SetStateAction<ProductItem>>
     userRequest: ProductRequest
     setUserRequest: React.Dispatch<React.SetStateAction<ProductRequest>>
     users: Product[]
@@ -35,11 +36,11 @@ export const ProductContext = createContext<ProductContextType | null>(null)
 export const useProductContext = () => {return useContext(ProductContext)}
 
 const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
-    const baseUrl:string = 'http://localhost:5000/api/users'
-    const EMPTY_PRODUCT: ProductItem = { tag: '', articleNumber: '', name: '', description:'', category: '', price: 0, imageName: '' }
+    const baseUrl:string = 'http://localhost:5000/api/products'
+    const EMPTY_PRODUCT: ProductItem = { tag: '', id: 0, name: '', description:'', category: '', price: 0, imageName: '' }
 
     const user_default: Product = { id: 0, category: '', name: '', description: '', imageName: '', price: 0 }
-    const userRequest_default: ProductRequest = { category: '', title: '', description: '', image: '', price: 0 }
+    const userRequest_default: ProductRequest = { category: '', name: '', description: '', image: '', price: 0 }
 
     const [product, setProduct] = useState<ProductItem>(EMPTY_PRODUCT)
     const [products, setProducts] = useState<ProductItem[]>([])
@@ -73,7 +74,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
 
     const get = async (articleNumber?: string) => {
         if (articleNumber !== undefined) {
-            const res = await fetch(baseUrl + `/details/${articleNumber}`)
+            const res = await fetch(baseUrl + `/product/details/${articleNumber}`)
             setProduct(await res.json())
         }
     }
@@ -132,7 +133,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
         })
     
         if (result.status === 200)
-            setUser(await result.json())
+            setProduct(await result.json())
         
     }
     
@@ -146,7 +147,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
     }
 
 
-    return <ProductContext.Provider value={{ user, setUser, userRequest, setUserRequest, users, create, update, remove, getAllCreatProduct, product, products, featured, discount, discount2, get, getAll, getFeatured, getDiscount, getDiscount2}}>
+    return <ProductContext.Provider value={{ user, setUser, setProduct, userRequest, setUserRequest, users, create, update, remove, getAllCreatProduct, product, products, featured, discount, discount2, get, getAll, getFeatured, getDiscount, getDiscount2}}>
         {children}
     </ProductContext.Provider>
 }
