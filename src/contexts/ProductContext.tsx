@@ -27,7 +27,7 @@ export interface ProductContextType {
     setUserRequest: React.Dispatch<React.SetStateAction<ProductRequest>>
     users: Product[]
     create: (e: React.FormEvent) => void
-    update: any
+    update: (e: React.FormEvent) => void
     remove: (id: number) => void
     getAllCreatProduct: () => void
 }
@@ -121,15 +121,15 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
     }
 
 
-    const update = async (id:number, e: React.FormEvent) => {
+    const update = async (e: React.FormEvent) => {
         e.preventDefault()
     
-        const result = await fetch(`${baseUrl}/${id}`, {
+        const result = await fetch(`${baseUrl}/${product.id}`, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(product)
         })
     
         if (result.status === 200)
