@@ -7,6 +7,7 @@ const ManageProductSection = () => {
     <div className="btn-group">
         <NavLink to="/createproduct" end><button><h1>Create Product</h1></button></NavLink>
         <NavLink to="/updateproduct" end><button><h1>Update Product</h1></button></NavLink>
+        <NavLink to="/deleteproduct" end><button><h1>Delete Product</h1></button></NavLink>
     </div>
     </section>
   )

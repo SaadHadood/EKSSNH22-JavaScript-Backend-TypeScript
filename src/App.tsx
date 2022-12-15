@@ -20,6 +20,7 @@ import MainMenuSection from './sections/MainMenuSection';
 import { ProductContext } from './contexts/contexts';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 import ProductProvider from './contexts/ProductContext';
+import DeleteProductView from './views/DeleteProductView';
 
 const App: React.FC = () => {
 
@@ -43,6 +44,7 @@ const App: React.FC = () => {
         <Route path="/createproduct" element={<CreateProductView />} />
         <Route path="/updateproduct/:id" element={<UpdateFormView />} />
         <Route path="/updateproduct" element={<UpdateFormView />} />
+        <Route path="/deleteproduct" element={<DeleteProductView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>

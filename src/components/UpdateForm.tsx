@@ -18,7 +18,7 @@ useEffect(() => {
   return (
     <form onSubmit={update} className="d-grid mb-5">
       <h3 className="display-6 mb-4">Update Product</h3>
-      <input type="text" value={product.id} />
+      <input type="hidden" value={product.id} />
       <input value={product.category} onChange={(e) => setProduct ({...product, category: e.target.value })} type="text" className="form-control py-2 mb-3" placeholder="Enter category..."></input>
       <input value={product.name} onChange={(e) => setProduct ({...product, name: e.target.value })} type="text" className="form-control py-2 mb-3" placeholder="Enter title..."></input>
       <input value={product.imageName} onChange={(e) => setProduct ({...product, imageName: e.target.value })} type="text" className="form-control py-2 mb-3" placeholder="image url..."></input>
