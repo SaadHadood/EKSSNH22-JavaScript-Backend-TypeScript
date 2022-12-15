@@ -16,7 +16,6 @@ const DeleteProductView: React.FC = () => {
       <BreadcrumbsSection currentPage="Delete Product" />
       <div className="container mt-5">
         <DeleteForm />
-        <hr className="my-5" />
       </div>
       <FooterSection />
     </UserProvider>

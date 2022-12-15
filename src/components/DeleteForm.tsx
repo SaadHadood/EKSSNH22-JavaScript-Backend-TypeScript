@@ -21,10 +21,9 @@ const DeleteForm = () => {
             <section className="userList mb-3 container"> 
             <div className="mb-3"> <h5>Category:</h5> {user.category}</div> 
             <div className="mb-3"> <h5>title:</h5> {user.name} </div> 
-            <div className="mb-3"> <h5>image:</h5> {user.imageName}</div> 
+            <img className="productImg" src={user.imageName}  alt={user.name} />
             <div className="mb-3"> <h5>price:</h5> {user.price}</div>
             <div onClick={() => remove(user.id)} key={user.id}><i className="fa-sharp fa-solid fa-trash"></i> Delete product </div>
-            <br></br>
             </section>))
         }
     
