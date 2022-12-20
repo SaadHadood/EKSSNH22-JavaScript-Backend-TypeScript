@@ -128,29 +128,10 @@ controller.route('/:articleNumber').delete (async (req, res) => {
 })
 
 
-/* controller.route('/:articleNumber').put (async (req, res) => {
-    const { name, description, price, category, tag, imageName, rating } = req.body
-    const updatedProduct = ({articleNumber, name, description, price, category, tag, imageName, rating })
-    
-    const updatedProduct = await productSchema.findByIdAndUpdate(req.params.articleNumber, updatedProduct, {new: true})
-
-    const productExist = await productSchema.findById(req.params.articleNumber)
-    if (productExist) {
-        const updateProduct = await productSchema.updateOne({ _id: req.params.articleNumber}, updatedProduct)
-        if (updateProduct)
-            res.status(200).json({text: `product ${name} with articlenumber ${articleNumber} was updated`})
-        else
-            res.status(400).json({text: 'somthing went wrong when we tried to update the product'})
-    }
-    return (updatedProduct)
-
-})  */
-
-
 
 controller.put('/:articleNumber', async (req, res) => {
     const id = req.params.articleNumber
-    const updates =
+    const updated =
     {
         name: req.body.name,
         tag: req.body.tag,
@@ -160,12 +141,12 @@ controller.put('/:articleNumber', async (req, res) => {
 
     const options = {new: true}
     
-    const product = await productSchema.findByIdAndUpdate(id, updates, options)
+    const product = await productSchema.findByIdAndUpdate(id, updated, options)
 
     if(product)
         res.status(200).json(product)
     else
-    res.status(404).json({text: "hello"})
+    res.status(404).json({text: "Error"})
 } )
 
 
